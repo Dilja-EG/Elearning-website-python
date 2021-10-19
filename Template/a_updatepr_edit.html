@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="en">
+<head>
+
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'trt.css' %}">
+
+</head>
+
+<body class="pic" background="{% static 'pic4.jpg' %}">
+    <div align="center">
+    <div style="display: block; width: 600px;">
+    <form method="post" action="{% url 'a_updatepr_edit' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+<br><br>
+    FIRSTNAME: <br><br><input type="text" value="{{bb.First_name}}" name="first_name"><br><br>
+    LASTNAME: <br><br><input type="text" value="{{bb.Last_name}}" name="last_name"><br><br>
+    USERNAME: <br><br><input type="text" value="{{um.username}}" name="user_name"><br><br>
+    EMAIL    :<br><br><input type="email" value="{{bb.Email}}" name="email"><br><br>
+        password:<br><br><input type="password" value="{{bb.password}}" name="psw"><br><br>
+
+    IMAGE: <br><br><img src="/media/{{bb.Image}}" alt="No image" height="200px" width="200px"><br><br>
+    <br><br><input type="file" value="Upload new image" name="imgg1"><br><br>
+        <input type="hidden" value="{{bb.Image}}" name="imgg2">
+    <button type="submit">UPDATE</button><br><br>
+    </form>
+        <button type="submit" onclick="location.href='{% url 'admin_home' %}'" name='mybtn2'>BACK</button>
+</div>
+</div>
+</body>
+</html>
+

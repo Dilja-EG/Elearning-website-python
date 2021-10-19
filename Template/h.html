@@ -1,0 +1,81 @@
+{% load static %}
+<html>
+<head>
+<title>Yoga</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{% static 'yoga/css/style.css' %}">
+<!--[if IE 9]><link rel="stylesheet" type="text/css" href="{% static 'yoga/css/ie9.css'%"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="{% static 'yoga/css/ie7.css'%"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="{% static 'yoga/css/ie6.css'%"><![endif]-->
+</head>
+<body>
+<div id="header">
+  <ul>
+    <li class="current"><a href="index.html"><span>Home</span></a></li>
+    <li><a href="services.html"><span>Services</span></a></li>
+    <li><a href="classes.html"><span>Classes</span></a></li>
+    <li><a href="videos.html"><span>Videos</span></a></li>
+    <li><a href="membership.html"><span>Membership</span></a></li>
+    <li><a href="about.html"><span>About Us</span></a></li>
+    <li><a href="blog.html"><span>Blog</span></a></li>
+    <li><a href="contact.html"><span>Contact Us</span></a></li>
+  </ul>
+  <span id="background"></span>
+  <div id="home">
+    <div class="section"> <a href="#"><img src="{static 'yoga'images/logo.gif' }" alt=""></a>
+      <div> Welcome to Yoga <a href="#">Join Us!</a> </div>
+    </div>
+    <div id="featured"> <img src="{static 'yoga'images/yoga-girl.gif' }" alt="">
+      <h1>Cum sociis nat PENATIBUS VIVA MAGNIS parturient montesnas</h1>
+      <ul>
+        <li> <a href="#"><img src="{ static 'yoga/images/exercise-class.jpg' }" alt=""></a>
+          <div><a href="#">Classes</a></div>
+        </li>
+        <li> <a href="#"><img src=" { static 'yoga/images/girl-exercise.jpg' }" alt=""></a>
+          <div><a href="#">Videos</a></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <ul class="first">
+    <li class="first">
+      <h3><a href="#">Welcome to <span>Yoga fitness club</span></a></h3>
+      <p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template.</p>
+    </li>
+    <li>
+      <h3><a href="#">Our <span>Commitment</span></a></h3>
+      <p>If you're experiencing issues and concerns about this website template, join the discussion on our forum and meet other people in the community who share the same interests with you.</p>
+    </li>
+  </ul>
+  <ul>
+    <li class="first">
+      <h3><a href="#">Blog: <span>Yoga Daily</span></a></h3>
+      <p>Looking for more templates? Just browse through all our Free Website Templates and find what you're looking for. But if you don't find any website template you can use, you can try our Free Web Design service and tell us all about it.</p>
+    </li>
+    <li>
+      <h3><a href="#">Updates: <span>Yoga Club Events</span></a></h3>
+      <p>This website template has been designed by Free Website Templates for you, for free. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to.</p>
+    </li>
+  </ul>
+</div>
+<div id="footer">
+  <div>
+    <div>
+      <div id="connect"> <span>Follow Us:</span> <a href="#"><img src="images/icon-facebook.gif" alt=""></a> <a href="#"><img src="{% static 'yoga/images/icon-twitter.gif' %}" alt=""></a> </div>
+      <div class="section">
+        <ul>
+          <li class="first"><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Template By <a target="_blank" href="http://www.freewebsitetemplates.com/">FreeWebsiteTemplates.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

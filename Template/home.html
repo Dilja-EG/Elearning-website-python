@@ -1,0 +1,127 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>HOME</title>
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <style>
+        .notification {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.notification:hover {
+  background: green;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -00px;
+  right: -00px;
+  padding: 3px 8px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+    </style>
+
+    <style>
+        .notification {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.notification:hover {
+  background: green;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -00px;
+  right: -00px;
+  padding: 3px 8px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+    </style>
+
+
+</head>
+<body class="pic" background="{% static 'pic7.jpg' %}">
+
+<ul>
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'news' %}">News</a></li>
+  <li><a href="{% url 'about' %}">About</a></li>
+  <li><a href="admin">Admin Inbuilt</a></li>
+  <li class="register">
+    <a href="javascript:void(0)" class="dropbtn">Blog</a>
+    <div class="register-content">
+      <a href="{% url 'h_blog_add' %}">Add</a>
+      <a href="{% url 'h_blog_view' %}">View</a>
+
+    </div>
+  </li>
+
+  <li><a href="{% url 'contact' %}">Contact</a></li>
+
+
+
+<li>
+
+    <li class="register">
+<button  class="notification"><span>SUBJECTS<i class="fa fa-caret-down"></i></span><span class="badge">{% if count > 0 %}{{count}}{% else %}0{% endif %}</span></button>
+
+    <div class="register-content">
+        {% for i in sd %}
+          <a href="{% url 'h_reg_msg' %}">{{i}}</a>
+        {% endfor %}
+    </div>
+</li>
+
+  <li><a href="{% url 'login' %}">Login</a></li>
+  <li class="register">
+    <a href="javascript:void(0)" class="dropbtn">Register</a>
+    <div class="register-content">
+      <a href="{% url 'student' %}">Student</a>
+      <a href="{% url 'teacher' %}">Teacher</a>
+      <a href="{% url 'admin_register' %}">Admin</a>
+
+    </div>
+  </li>
+</ul>
+   <div style="color:blue;" align="center">
+            {% if messages %}
+                {% for msg in messages %}
+                        {{ msg }}
+                {% endfor %}
+            {% endif %}
+            </div>
+
+</body>
+
+
+</html>
+
+
+
+
+
+

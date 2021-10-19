@@ -1,0 +1,12 @@
+#content div div div.sidebar ul li div{
+	margin-right:10px;
+}
+#content div div div.sidebar ul li p{
+	width:200px;
+}
+#footer div{
+	padding:40px 0 30px;
+}
+#footer div div.section p{
+	padding-top:15px;
+}

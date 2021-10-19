@@ -1,0 +1,89 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'admin.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 's.css' %}">
+             <style>
+        .notification {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.notification:hover {
+  background: green;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -00px;
+  right: -00px;
+  padding: 3px 8px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+    </style>
+
+
+
+</head>
+<body class="pic" background="{% static 'pic7.jpg' %}">
+<div class="navbar">
+
+        <a href="{% url 't_update_pr' %}">Update profile</a>
+        <a href="{% url 't_student_progress' %}">Student Progress</a>
+        <a href="{% url 't_change_password' %}">Change Password</a>
+
+
+   <div class="dropdown">
+    <button class="dropbtn">Topics<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+        <a href="{% url 't_subject' %}">Subject</a>
+        <a href="{% url 't_chapter' %}">Chapter</a>
+        <a href="{% url 't_chapter_content' %}">Chapter Content</a>
+    </div>
+  </div>
+
+   <button  class="notification" onclick="location.href='{% url 't_student_booked_details' %}'"><span>Student booked details<i class="fa fa-caret-down"></i></span>
+        <a href="{% url 't_notify' %}" class="badge">{% if count > 0 %}{{count}}{% else %}0{% endif %}</a></button>
+
+
+  <div class="dropdown">
+    <button class="dropbtn">Exam<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+            <a href="{% url 't_schedule_test' %}">Schedule Test</a>
+            <a href="{% url 't_delete_test' %}">Delete Test</a>
+            <a href="{% url 't_exam_result' %}">Exam Results</a>
+    </div>
+  </div>
+
+            <a href="{% url 't_messages' %}">Messages</a>
+            <a href="{% url 't_attendance' %}">Attendance</a>
+            <a href="{% url 'logout' %}">Logout</a>
+    </div>
+<div align="center">
+<h1>TEACHER HOME</h1>
+    </div>
+<div align="center" style="color:blue;">
+        {% if messages %}
+            {% for msg in messages %}
+                    {{ msg }}
+            {% endfor %}
+        {% endif %}
+</div>
+
+
+
+</body>
+</html>
+

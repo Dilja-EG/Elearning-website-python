@@ -1,0 +1,19 @@
+#header ul li a, #header ul li a span, #footer div div.section ul li a{
+	display:inline-block;
+}
+#header ul li{
+	padding-left:10px;
+}
+#content div ul li div ul{
+	margin-right:30px;
+}
+#content div ul li div ul.section{
+	margin:0 0 0 -1px;
+	width:190px;
+}
+#footer div{
+	padding-bottom:20px;
+}
+#footer div div.section p{
+	padding-top:15px;
+}
